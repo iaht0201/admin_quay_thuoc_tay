@@ -1,0 +1,213 @@
+
+<div class="products">
+    <div class="products-header">
+      <div class="container">
+          <div class="products-header-title">
+             DANH SÁCH SẢN PHẨM
+           </div>
+      </div>     
+    </div>
+    <div class="products-body col-lg-12">
+      <div class="container">
+        <div class="products-body-table">
+            <div class="table__title">
+              <div class="container">
+                  <div class="title">
+                      Tất cả sản phẩm
+                   </div>
+                    <a href="/products/trash">Thùng rác</a>
+              </div>
+              <div class="add_product" style="margin-right: 20px;">
+                <a href="/products/create">
+                <button type="button" class="btn btn-dark add-product">+ Thêm sản phẩm</button>
+                </a>
+              </div>
+            </div>
+            {{!-- <div class="products-body-table__nav">
+               <div class="col-lg-9">
+                 
+                 <div class="search">
+                      <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm theo mã sản phẩm , tên sản phẩm " aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                      </form>
+                 </div>
+               </div>
+            </div> --}}
+            <div class="products-body-table__data">
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr style="text-align: center">
+                      <th style="width:10px ;" scope="col">
+                         <div class="form-check" style="top: -25px;">
+                            <input class="form-check-input" type="checkbox" name="courseIds[]" value="{{this._id}}">
+                        </div>  
+                      </th>
+                      <th scope="col" style="width:85px;">Ảnh</th>
+                      <th scope="col" style="width:240px">Sản phẩm</th>
+                      <th scope="col" style="width:320px">Nhãn hiệu</th>
+                      <th scope="col" style="width:100px">Số lượng</th>
+                      <th scope="col">Ngày khởi tạo</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each products}}
+                    <tr style="">
+                      <td>  
+                        <div class="form-check" style="top:21px">
+                            <input class="form-check-input" type="checkbox" name="courseIds[]" value="{{this._id}}">
+                        </div>  
+                      </td>
+                      <td ><img src="{{this.image}}" alt="anh_chi_tiet" class="img_product" style="width: 60px ; hei;"></td>
+                      <td>{{this.name}}</td>
+                      <td>{{this.brand}} </td>
+                      <td style="text-align: center"> {{this.quantity}}</td>
+                      <td style="text-align: center">{{this.createAt}}</td>
+                      <td> <a style="margin-right: 10px;" href="/products/update/{{this._id}}/edit">
+                        Sửa
+                      </a>
+                      <a href="" data-id="{{this._id}}" data-toggle="modal" data-target="#delete-product-modal">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </a></td>
+                    </tr>
+                    {{/each}}
+                  
+                </tbody>
+                
+              </table>
+            </div>
+            <div class=" pagination-centered container">
+              <ul class="pagination">
+                {{#paginate pagination type="first"}}
+                  <li {{#if disabled}}class="disabled page-item"{{/if}}><a class ="page-link" href="/products/page={{n}}">First</a></li>
+                {{/paginate}}
+                {{#paginate pagination type="previous"}}
+                  <li {{#if disabled}}class="disabled page-item"{{/if}}><a class ="page-link" href="/products/page={{n}}">Prev</a></li>
+                {{/paginate}}
+                {{#paginate pagination type="middle" limit="7"}}
+                  <li {{#if active}}class="active page-item"{{/if}}><a class ="page-link" href="/products/page={{n}}">{{n}}</a></li>
+                {{/paginate}}
+                {{#paginate pagination type="next"}}
+                  <li {{#if disabled}}class="disabled page-item"{{/if}}><a  class ="page-link" href="/products/page={{n}}">Next</a></li>
+                {{/paginate}}
+                {{#paginate pagination type="last"}}
+                  <li {{#if disabled}}class="disabled page-item"{{/if}}><a class ="page-link" href="/products/page={{n}}">Last</a></li>
+                {{/paginate}}
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{{!-- delete modal products --}}
+<div class="modal fade" id="delete-product-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="delete-product-modal">Xoá sản phẩm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Bạn có thật sự muốn xoá sản phẩm này không ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+        <button type="button" class="btn btn-primary btn-delete-product">Đồng ý</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{{!--  --}}
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="top:30% !important" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/products/page=1" >
+  <div class="form-group">
+    <label for="name">Tên thuốc </label>
+    <input type="text" class="form-control" id="name" name = "name">
+  </div>
+   <div class="form-group">
+    <label for="image">Hình ảnh</label>
+    <input type="text" class="form-control" id="image" name = "image">
+  </div>
+   <div class="form-group">
+    <label for="price">Giá </label>
+    <input type="text" class="form-control" id="price" name = "price">
+  </div>
+   <div class="form-group">
+    <label for="unit">Đơn vị</label>
+    <input type="text" class="form-control" id="unit" name = "unit">
+  </div>
+  <div class="form-group" name ="detail">
+    <label for="name" name="detail">Chi tiết  </label>
+    <div class="form-group">
+    <label for="medicine">Dược hoá </label>
+    <input type="text" class="form-control" id="medicine" name = "medicine">
+    </div>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Thêm khoá học</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+<form method="POST" name="delete-product-form">
+
+</form>
+{{!-- confirm delete product --}}
+<div class="modal fade" id="delete-course-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="delete-course-modal">Xoá sản phẩm </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Bạn có muốn xoá 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        <button type="button" class="btn btn-primary btn-delete-product">Xoá bỏ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+   document.addEventListener('DOMContentLoaded' ,() => { 
+     var courseId ;
+    var deleteForm = document.forms['delete-product-form']
+    btnDeleteProduct =document.querySelector('.btn-delete-product')
+     $('#delete-product-modal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      courseId = button.data('id')})
+    btnDeleteProduct.onclick = function () {
+       deleteForm.action ='/products/' + courseId + '?_method=DELETE'
+      console.log(deleteForm.action)
+      deleteForm.submit() ; 
+    }
+    console.log(btnDeleteProduct)
+   })
+</script>

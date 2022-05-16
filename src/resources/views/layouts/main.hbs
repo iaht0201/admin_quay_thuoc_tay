@@ -1,0 +1,277 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Quầy thuốc tiện lợi</title>
+    <link
+      href='https://cdn.jsdelivr.net/npm/@coreui/coreui@4.1.1/dist/css/coreui.min.css'
+      rel='stylesheet'
+      integrity='sha384-4RjTy+ihDlYQqAQJodVMv1QuiX0mRlR0xtuKKu1P8I2TxVdGPXaW+VxJ6PirwMm4'
+      crossorigin='anonymous'
+    />
+    <link
+      href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'
+      rel='stylesheet'
+    />
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css'
+      integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm'
+      crossorigin='anonymous'
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;500&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='../css/app.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  </head>
+  <body>
+    <div class="app">
+      {{!-- <div class="admin-login">
+        <form action="">
+          <input type="email" placeholder="Nhập email" class="email">
+           <input type="password" placeholder="Nhập mật khâủ">
+           <button class="btn-login" type="submit" class="pass">Đăng nhập</button>
+        </form>
+      </div> --}}
+      <div class="admin-main">
+        
+      <div class='sidebar close'>
+        <div class='logo-details'>
+          <img src='/img/drug.png' alt='logo' />
+          <span class='logo_name'>QUAN LY KHO THUOC TAY </span>
+        </div>
+        <ul class='nav-links'>
+          <li  class="a">
+            <a href='/'>
+              <i class='bx bx-grid-alt'></i>
+              <span class='link_name' data-value="Tổng quan">Tổng quan</span>
+            </a>
+            <ul class='sub-menu blank'>
+              <li ><a class='link_name ' href='/' data-value="Tổng quan">Tổng quan</a></li>
+            </ul>
+          </li>
+          {{!-- <li>
+            <div class='icon-link'>
+              <a href='/category'>
+                <i class='bx bx-collection'></i>
+                <span class='link_name' data-value="Sản phẩm">Sản phẩm</span>
+              </a>
+              <i class='bx bxs-chevron-down arrow'></i>
+              <ul class='sub-menu blank'>
+                <li><a class='link_name' href='/category' data-value="Sản phẩm">Sản phẩm</a></li>
+              </ul>
+            </div>
+             <ul class="sub-menu">
+            <li><a class="link_name" href="#">Category</a></li>
+            <li><a href="#">Danh sách sản phẩm</a></li>
+            <li><a href="#">Quản lý kho</a></li>
+            <li><a href="#">Nhập hàng</a></li>
+            <li><a href="#">Kiểm hàng</a></li>
+            <li><a href="#">Chuyển hàng</a></li>
+            <li><a href="#">Nhập hàng</a></li>
+          </ul> 
+          </li> --}}
+           <li>
+            <div class='iocn-link'>
+               <a href='#'>
+               <i class='bx bx-collection'></i>
+                <span class='link_name'>Sản phẩm</span>
+              </a>
+              <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class='sub-menu'>
+              <li><a class='link_name' href='#'>Sản phẩm</a></li>
+              <li><a href='/products/page=1'>Danh sách sản phẩm</a></li>
+              <li><a href='#'>Quản lý kho</a></li>
+              <li><a href='#'>Nhập hàng</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class='iocn-link'>
+              <a href='#'>
+                <i class='bx bx-book-alt'></i>
+                <span class='link_name'>Posts</span>
+              </a>
+              <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class='sub-menu'>
+              <li><a class='link_name' href='#'>Posts</a></li>
+              <li><a href='#'>Web Design</a></li>
+              <li><a href='#'>Login Form</a></li>
+              <li><a href='#'>Card Design</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href='#'>
+              <i class='bx bx-pie-chart-alt-2'></i>
+              <span class='link_name'>Analytics</span>
+            </a>
+            <ul class='sub-menu blank'>
+              <li><a class='link_name' href='#'>Analytics</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href='#'>
+              <i class='bx bx-line-chart'></i>
+              <span class='link_name'>Chart</span>
+            </a>
+            <ul class='sub-menu blank'>
+              <li><a class='link_name' href='#'>Chart</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class='iocn-link'>
+              <a href='#'>
+                <i class='bx bx-plug'></i>
+                <span class='link_name'>Plugins</span>
+              </a>
+              <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class='sub-menu'>
+              <li><a class='link_name' href='#'>Plugins</a></li>
+              <li><a href='#'>UI Face</a></li>
+              <li><a href='#'>Pigments</a></li>
+              <li><a href='#'>Box Icons</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href='#'>
+              <i class='bx bx-compass'></i>
+              <span class='link_name'>Explore</span>
+            </a>
+            <ul class='sub-menu blank'>
+              <li><a class='link_name' href='#'>Explore</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href='#'>
+              <i class='bx bx-history'></i>
+              <span class='link_name'>History</span>
+            </a>
+            <ul class='sub-menu blank'>
+              <li><a class='link_name' href='#'>History</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href='#'>
+              <i class='bx bx-cog'></i>
+              <span class='link_name'>Setting</span>
+            </a>
+            <ul class='sub-menu blank'>
+              <li><a class='link_name' href='#'>Setting</a></li>
+            </ul>
+          </li>
+          {{! <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="image/profile.jpg" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Prem Shahi</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li> }}
+        </ul>
+      </div>
+
+      <div class='home-section'>
+        <div class='home-content'>
+          <i class='bx bx-menu'></i>
+          <div class='header'>
+            <div class='header-title'>
+             
+            </div>
+          </div>
+
+        </div>
+        <div>
+          {{{body}}}
+        </div>
+      </div>
+      {{>footer}}
+    
+      </div>
+    </div>
+
+  </body>
+  <form action=""></form>
+  <script>
+   
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+           let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu") ;
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      sidebarBtn.addEventListener("click", () => {
+        console.log("Đã đóng")
+        sidebar.classList.toggle("close");
+      });
+     
+    </script>
+    <script>
+      const headerTitle = document.querySelector('.header-title')
+         function getEventTarget(e) {
+        e = window.event;
+        return e.target || e.srcElement; 
+      }
+
+      const ul = document.querySelector('.nav-links');
+      ul.onclick = function(event) {
+        var target = getEventTarget(event);
+        {{!-- alert(target.innerHTML); --}}
+        headerTitle.innerHTML = target.innerHTML
+      };
+
+      const btnLogin = document.querySelector('.btn-login')
+      const adminMain = document.querySelector('.admin-main')
+      const email = document.querySelector('.email')
+      const password = document.querySelector('.pass')
+      const adminLogin = document.querySelector('.admin-login')
+      btnLogin.onclick =() => {
+          if (email.value ==='admin'){
+          adminMain.style.display = "block" 
+        adminLogin.style.display = "none" 
+      }
+      }
+    </script>
+  <script
+    src='https://cdn.jsdelivr.net/npm/@coreui/coreui@4.1.1/dist/js/coreui.bundle.min.js'
+    integrity='sha384-PXOm0LjM7kBY7at2HNqu2pAJsTVQUPRzpJSwQD0V//zsjFAcv61qjiZj3ELesLb1'
+    crossorigin='anonymous'
+  ></script>
+  <script
+    src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js'
+    integrity='sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn'
+    crossorigin='anonymous'
+  ></scrip>
+  <script
+    src='https://cdn.jsdelivr.net/npm/@coreui/coreui@4.1.1/dist/js/coreui.min.js'
+    integrity='sha384-85mv4P1wdLGe7AOAJKs31hW8LZHApEb3/mOieV4JbvF2v99+TmYLrpvmlj9edI/C'
+    crossorigin='anonymous'
+  ></script>
+  <script
+    src='https://code.jquery.com/jquery-3.2.1.slim.min.js'
+    integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
+    crossorigin='anonymous'
+  ></script>
+  <script
+    src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js'
+    integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q'
+    crossorigin='anonymous'
+  ></script>
+  <script
+    src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js'
+    integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl'
+    crossorigin='anonymous'
+  ></script>
+</html>

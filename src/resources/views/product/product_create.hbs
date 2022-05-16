@@ -1,0 +1,112 @@
+<form class="create-products-form" method="POST" action="/products" enctype="multipart/form-data">
+<div class="create">
+    <div class="header_create row">
+        <div class="col-lg-9">
+            <div class="container">
+                <div class="return-product">
+                    <a href="/products/page=1">
+                    < Quay lại danh sách sản phẩm
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <a href="/products/page=1">
+                <button type="button" class="btn btn-outline-dark">
+                    Thoát
+                </button>       
+            </a>
+            <a href="">
+                <button type="submit" class="btn btn-save btn-outline-dark" >
+                    Lưu
+                </button>  
+            </a>
+        </div>
+    </div>
+
+        <div class="body_create">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="general-infor">
+                        <div class="general-header">
+                            <div class="general-header-title">
+                                Thông tin chung
+                            </div>
+                        </div>
+                        <div class="general-body">
+                           <div class="container">
+                                <div class="form-group">
+                                    <label for="name">Tên sản phẩm</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Nhập tên thuốc" name="name" >
+                                </div>
+                                  <div class="form-group">
+                                    <label for="name">Nhà cung cấp</label>
+                                    <input type="text" class="form-control" id="brand" placeholder="Nhập tên thuốc" name="brand" >
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="price-product">
+                        <div class="price-product-header">
+                            <div class="price-product-header-title">
+                                Giá sản phẩm 
+                            </div>
+                             <div class=" container row">
+                                <div class="col-lg-6">
+                                     <div class="form-group">
+                                    <label for="retail_price" >Giá bán lẻ</label>
+                                    <input type="number" class="form-control" id="retail_price" name="retail_price" >
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="wholesale_price">Giá bán buôn</label>
+                                    <input type="number" class="form-wholesale_price" id="wholesale_price" name="wholesale_price"  >
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                     <div class="form-group">
+                                    <label for="import_price">Giá nhập</label>
+                                    <input type="number" class="import_price" id="import_price" name="import_price"  >
+                                    </div>
+                                </div>
+                    </div>
+                    </div>
+            </div>
+        
+        
+                </div>
+                <div class="col-lg-4">
+                    <div> Chi tiết </div>
+                     
+                     <div class="form-group">
+                          <label for="product_id">Mã sản phẩm</label>
+                        <input type="text" class="form-control" name = "_id" id="product_id" placeholder="Nhập mã sản phẩm" >
+                    </div>
+                     <div class="form-group">
+                         <label for="product_id">Số lượng</label>
+                        <input type="number" class="form-control" name = "quantity" id="quantity" placeholder="Nhập số lượng" >
+                    </div>
+                    <div class="form-group">
+                          <label for="product_id">Dược hoá</label>
+                        <input type="text" class="form-control" name = "medicine" id="medicine" placeholder="Hoạt chất nồng độ" >
+                    </div>
+                    <div class="form-group">
+                        <label for="pack">Quy cách đóng gói</label>
+                        <input type="text" class="form-control" name="pack" id="mass" placeholder="Qui cách đóng gói" >                 
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+<input type="file" name="image"/> 
+</form>
+
+<script>
+    const createForm = document.forms['create-products-form']
+    const btnSave = document.querySelector('btn-save') 
+     btnSave.onclick  = () => {
+    createForm.action ='/courses/' + courseId + '?_method=DELETE'
+    createForm.submit() ;
+  }
+</script>

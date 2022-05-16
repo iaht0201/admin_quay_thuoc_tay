@@ -1,0 +1,241 @@
+  <div class="overview">
+    <div class="mt-4 guide-start ">
+    <div class="container row">
+      <div class="col-lg-10">
+        <div class="guide">
+          <div class="guide-title">
+            Chào mừng bạn đến với phần mềm quản lý quầy thuốc tây tiện lợi. Hãy bắt đầu sử dụng phần mềm ngay nào! 
+            <span class="guide-title-content">
+              Hãy dành ít phút thực hiện các bước sau đây để làm quen bạn nhé!
+            </span>
+          </div>
+          <div class="guide-function row container">
+            <div class="col-lg-4">
+              <div class="guide-add-product">
+              <i class="fa-solid fa-circle-plus"></i>
+                <div class="guide-add-product-title">
+                  Thêm sản phẩm 
+                </div>
+                <div class="guide-add-product-content">
+                  Tạo mới và quản lý sản phẩm
+                </div>
+              <button type="button" class="btn btn-primary">Thêm sản phẩm</button>
+            </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="guide-add-order">
+                <i class="fa-solid fa-file-circle-plus"></i>
+              <div class="guide-add-product-title">
+                  Thêm đơn hàng
+                </div>
+                <div class="guide-add-product-content">
+                Tạo mới và quản lý đơn hàng của bạn
+                </div>
+              <button type="button" class="btn btn-primary">Thêm đơn hàng</button>
+            </div>
+            </div>
+          <div class="col-lg-4">
+            
+            <div class="guide-setting" >
+              <i class="fa-solid fa-gear"></i>
+                <div class="guide-add-product-title">
+                  Cài đặt cửa hàng
+                </div>
+                <div class="guide-add-product-content">
+                Cài đặt các thông tin cho việc bán hàng của bạn
+                </div>
+                <button type="button" class="btn btn-primary">Cấu hình cửa hàng</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+      <div class="col-lg-2">
+        <div class="next">
+          Bỏ qua 
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="statistical">
+    <div class="row">
+        <div class="col-lg-9">
+    <div class="mt-4 statistical-result-day">
+    <div class="container row">
+      <div class="col-lg-12">
+         <div class="result-day">
+            <div class="container">
+                <div class="row">
+                   <div class="result-title col-lg-9">
+                      Kết quả kinh doanh trong ngày
+                    </div>
+                   <div class="branch col-lg-3">
+                      <select class="form-select" aria-label="Default select example">
+                        <option value="1" >Tất cả chi nhánh</option>
+                        <option value="2">Huế</option>
+                        <option value="3">Đà Nẵng</option>
+                        <option value="4">Hà Nội</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+         
+          </div>
+             <div class="statistical-day">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="statis-turnover">
+                          <i class="fa-solid fa-sack-dollar"></i>
+                              <div class="statis-content">
+                                <div class="statis-turnover-title">
+                                  Doanh thu
+                                </div>
+                              <div class="statis-turnover-count">
+                            {{!-- Số doanh thu --}}
+                              0
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="statis-order-news">
+                          <i class="fa-solid fa-box"></i>
+                              <div class="statis-content">
+                                <div class="statis-order-news-title">
+                                 Đơn hàng mới
+                                </div>
+                              <div class="statis-order-news-count">
+                            {{!-- Số doanh thu --}}
+                              0
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="statis-order-return">
+                           <i class="fa-solid fa-arrow-rotate-left"></i>
+                              <div class="statis-content">
+                                <div class="statis-order-return-title">
+                                  Đơn trả hàng
+                                </div>
+                              <div class="statis-order-return-count">
+                            {{!-- Số doanh thu --}}
+                              0
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="statis-order-cancel">
+                           <i class="fa-solid fa-sack-dollar"></i>
+                              <div class="statis-content">
+                                <div class="statis-order-cancel-title">
+                                  Đơn huỷ
+                                </div>
+                              <div class="statis-order-cancel-count">
+                            {{!-- Số doanh thu --}}
+                              0
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </div>
+    </div>
+      
+    </div>
+    
+     <div class="statistical-result-proportion">
+      <div class="container row ">
+         <div class="col-lg-12">
+            <div class="proportion-header mt-4">
+              <div class="col-lg-7">
+                  <div div class="row">
+                    <div class="proportion-turnover col-lg-6">
+                    DOANH THU BÁN HÀNG
+                    </div>
+                   <div class="proportion-sell col-lg-6">
+                    TỶ TRỌNG BÁN HÀNG
+                    </div>
+                </div>
+             </div>
+              <div class="col-lg-5">
+                   <div class="row">
+                     <div class="branch col-lg-7">
+                      <select class="form-select">
+                        <option value="1" >Tất cả chi nhánh</option>
+                        <option value="2">Huế</option>
+                        <option value="3">Đà Nẵng</option>
+                        <option value="4">Hà Nội</option>
+                      </select>
+                    </div>
+                     <div class="date col-lg-5">
+                      <select class="form-select" >
+                        <option value="1" >Hôm nay</option>
+                        <option value="2">Hôm qua</option>
+                        <option value="3">7 ngày qua</option>
+                        <option value="4">Tháng này</option>
+                        <option value="5">Tháng trước</option>
+                        <option value="6">Năm nay</option>
+                        <option value="7">Năm ngoái</option>
+                      </select>
+                    </div>
+                   </div>
+              </div>
+            </div>
+            <div class="proportion-body">
+            <img src="../img/empty.png" alt="anh">
+            </div>
+         </div>
+        
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="mt-4">
+          <div class="news">
+             <div class="news-title">
+               Tin tức đáng chú ý 
+             </div>
+             {{#each news}}
+             <div class="news-item">
+               
+               <div class="news-item-image">
+                 <img src="../img/{{this.image}}" alt="anh">
+               </div>
+               <div class="news-item-content">
+                 <div class="news-item-content-title">
+                    {{this.name}}
+                 </div>
+                 <div class="news-item-content-category">
+                   {{this.category}}
+                 </div>
+               
+               </div>
+             </div>
+             {{/each}}
+           </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    </div>  
+  </div>
+  </div>
+
+  <script>
+    const next = document.querySelector('.next')
+    const guide = document.querySelector('.guide-start')
+    const statistical = document.querySelector('.statistical')
+    next.addEventListener('click' , ()=> {
+      guide.style.display = 'none'
+      statistical.style.display = 'block'
+    })
+  </script>
